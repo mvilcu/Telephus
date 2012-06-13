@@ -307,7 +307,7 @@ class CassandraPoolReconnectorFactory(protocol.ClientFactory):
         return d
 
     def clear_job(self, x):
-        self.logstate('clear job %s (result %r)' % (self.jobphase, x))
+        self.logstate('clear job %s' % (self.jobphase))
         self.jobphase = None
         self.job_d = None
         return x
